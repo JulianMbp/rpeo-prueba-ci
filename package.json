@@ -1,0 +1,25 @@
+{
+  "name": "release-approval-test-repo",
+  "version": "1.0.0",
+  "description": "Repo de prueba para demo de cobertura en Release Approval PoC",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["text", "lcov", "json-summary"],
+    "coverageThreshold": {
+      "global": {
+        "lines": 80,
+        "functions": 80,
+        "branches": 80,
+        "statements": 80
+      }
+    },
+    "coverageDirectory": "coverage"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
