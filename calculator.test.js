@@ -1,4 +1,4 @@
-const { add, subtract, multiply, divide, percentage } = require('../src/calculator');
+const { add, subtract, multiply, divide, percentage } = require('./calculator');
 
 describe('Calculator', () => {
 
