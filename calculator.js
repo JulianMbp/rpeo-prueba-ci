@@ -24,8 +24,5 @@ function percentage(value, total) {
   return (value / total) * 100;
 }
 
-function addBad(b,a){
-  return b-a
-}
 
 module.exports = { add, subtract, multiply, divide, percentage };
