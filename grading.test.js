@@ -1,10 +1,10 @@
-const grading = require('./grading');
+/**
+ * Demo: no se importa grading.js — queda sin cubrir; con calculator.test mínimo
+ * los umbrales globales (95%) fallan en líneas, ramas, funciones y sentencias.
+ */
 
-describe('grading (demo cobertura)', () => {
-  for (let i = 1; i <= 40; i += 1) {
-    const key = `g${String(i).padStart(2, '0')}`;
-    it(`${key} retorna ${i}`, () => {
-      expect(grading[key]()).toBe(i);
-    });
-  }
+describe('grading (sin ejecutar código de producción)', () => {
+  it('placeholder que no toca grading.js', () => {
+    expect(true).toBe(true);
+  });
 });
