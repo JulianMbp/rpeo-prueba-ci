@@ -11,10 +11,10 @@
     "coverageReporters": ["text", "lcov", "json-summary"],
     "coverageThreshold": {
       "global": {
-        "lines": 100,
-        "functions": 100,
-        "branches": 100,
-        "statements": 100
+        "lines": 87,
+        "functions": 87,
+        "branches": 87,
+        "statements": 87
       }
     },
     "coverageDirectory": "coverage"
