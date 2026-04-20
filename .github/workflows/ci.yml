@@ -1,0 +1,73 @@
+
+name: CI - Tests y Cobertura
+
+
+
+on:
+
+  push:
+
+    branches: [ main, develop ]
+
+  pull_request:
+
+    branches: [ main ]
+
+
+
+jobs:
+
+  test:
+
+    name: Tests y Cobertura
+
+    runs-on: ubuntu-latest
+
+
+
+    steps:
+
+      - name: Checkout código
+
+        uses: actions/checkout@v4
+
+
+
+      - name: Setup Node.js
+
+        uses: actions/setup-node@v4
+
+        with:
+
+          node-version: '20'
+
+          cache: 'npm'
+
+
+
+      - name: Instalar dependencias
+
+        run: npm ci
+
+
+
+      - name: Ejecutar tests con cobertura
+
+        run: npm run test:coverage
+
+
+
+      - name: Comentar cobertura en el PR
+
+        uses: ArtiomTr/jest-coverage-report-action@v2
+
+        if: github.event_name == 'pull_request'
+
+        with:
+
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+          test-script: npm run test:coverage
+
+          annotations: none
+
