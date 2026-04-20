@@ -8,6 +8,10 @@
   },
   "jest": {
     "collectCoverage": true,
+    "collectCoverageFrom": [
+      "calculator.js",
+      "grading.js"
+    ],
     "coverageReporters": ["text", "lcov", "json-summary"],
     "coverageThreshold": {
       "global": {
